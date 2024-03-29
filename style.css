@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #121212; 
+  color: #ffffff; 
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  width: 90%;
+  height: 80%;
+  border-radius: 10px;
+  background: #1e1e1e; 
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); 
+}
+
+.header {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto 12px;
+}
+
+.header span {
+  font-weight: 700;
+  font-size: 18px;
+  word-break: break-all;
+}
+
+#new {
+  font-size: 14px;
+  padding: 6px 12px;
+  border-radius: 5px;
+  border: none;
+  color: #ffffff;
+  background-color: #3f51b5;
+}
+.divTable {
+  padding: 10px;
+  width: auto; 
+  height: inherit; 
+  overflow: auto;
+}
+
+.divTable::-webkit-scrollbar {
+  width: 12px;
+  background-color: #1e1e1e; 
+}
+
+.divTable::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #333333; 
+}
+table {
+  width: 100%;
+  border-spacing: 10px;
+  word-break: break-all;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: #333333; 
+}
+
+tr {
+  border-bottom: 1px solid #444444 !important;
+}
+
+tbody tr td {
+  vertical-align: top;
+  padding: 8px;
+}
+
+thead tr th {
+  padding: 8px;
+  text-align: start;
+}
+
+thead tr th.acao {
+  width: 100px!important;
+  text-align: center;
+}
+
+th.acao {
+  color: #ffffff; 
+}
+
+tbody tr td.acao {
+  text-align: center;
+}
+
+.modal-container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 400px; 
+  margin: 20px;
+}
+
+.modal label {
+  font-size: 14px;
+  width: 100%;
+}
+
+.modal input {
+  width: 100%;
+  outline: none;
+  padding: 5px 10px; 
+  margin-bottom: 20px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.modal button {
+  width: 100%;
+  margin: 10px auto;
+  outline: none;
+  border-radius: 20px; 
+  padding: 5px 10px; 
+  border: none;
+  background-color: #3f51b5;
+  color: #ffffff;
+}
+
+.active {
+  display: flex;
+}
+
+.active .modal {
+  animation: modal .4s;
+}
+
+@keyframes modal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -60px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+td button {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+td button i {
+  font-size: 25px;
+}
+
+td button i:first-child {
+  margin-right: 10px;
+}
+
+#btnVoltar {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #9f3030;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#btnVoltar:hover {
+  background-color: #9f3030; 
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 95%; 
+  }
+
+  .modal {
+    width: 90%; 
+  }
+}
